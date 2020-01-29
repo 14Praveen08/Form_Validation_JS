@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.0.3/bootstrap-show-password.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>ABC Private Ltd.</title>
+<script type="text/javascript">
+function viewPassword()
+{
+var passwordInput = document.getElementById('password');
+var passStatus = document.getElementById('passStatus');
+if (passwordInput.type == 'text')
+{
+  passwordInput.type='password';
+  passStatus.className='fa fa-eye-slash';
+}
+else
+{
+  passwordInput.type='text';
+  passStatus.className='fa fa-eye';
+}
+}
+function viewData()
+{
+	
+
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	if(email=='praveenkumaar148@gmail.com' && password=='123456789')
+	{
+		 document.getElementById('showDiv').style.display = "block";
+	    }
+	else
+		{
+		alert("Try again with Valid Email and Password")
+		}
+	}
+
+
+</script>
+</head>
+<body>
+
+<div class="container" style="	background: #a0cfec; padding-top: 20px;">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="logo">
+			<img src="C:\Users\Training\Downloads\images.png" width="50" height="50">
+</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="row">
+				<div class="col-sm-5">
+					  <div class="form-group">
+					    <input type="text" id="email" pattern="^[A-Za-z0-9._%+-]{4,15}@[A-Za-z0-9.-]{5,10}\.[a-zA-Z]{3}$" class="form-control" placeholder="Email Address" required>
+					    
+					  </div>
+				</div>	
+				<div class="col-sm-5">
+					 <div class="form-group input-icons" >
+					 <!-- <input type="password" id="password" class="form-control" placeholder="Password" required>-->
+					    <div class="input-group-append">
+					     <input type="password" id="password" class="form-control" placeholder="Password" required>
+					   <span class="input-group-text"> <i id="passStatus" class="fa fa-eye-slash" aria-hidden="true" onClick="viewPassword()"></i></span>
+					    </div>
+					    
+					 </div>
+				</div>
+				<div class="col-sm-2">
+					 <div class="form-group">
+					    <button type="button" class="btn btn-primary" onclick="viewData()">Submit</button>
+
+					  </div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	</div>	
+	<br>
+	<div id="showDiv" style="display:none;"  class="container">
+	<div class="row">
+		<div class="col-md-6">
+				<div>
+					  <div class="form-group">
+					   <input type="text" id="fName" pattern="^[A-Za-z0-9._%+-]{4,15}@[A-Za-z0-9.-]{5,10}\.[a-zA-Z]{3}$" class="form-control" placeholder="Name" required>
+					    
+					  </div>
+				</div>
+				<div>
+						<div class="form-group">
+					   <input type="number" id="fNumber"class="form-control" placeholder=" Phone Number" required>
+					    
+					  </div>
+					</div>
+						<div>
+					  <div class="form-group">
+					   <input type="text" id="fSAddress"class="form-control" placeholder=" Source Address" required>
+					    </div>
+					  </div>
+				
+					  <div>
+					  <div class="form-group">
+					   <input type="text" id="fDAddress"class="form-control" placeholder=" Destination Address" required>
+					   </div> 
+					  </div>
+				
+				<div>
+				<label for="inputWeight" >Appx. Weight</label>
+      			<select id="inputWeight" class="form-control">
+        		<option >0-5kg</option>
+        		<option>5-10kg</option>
+        		<option>10-15kg</option>
+        		<option>15-20kg</option>
+        		<option>20-25kg</option>
+        		<option>25-30kg</option>
+        		<option>More than 30kg</option>
+      			</select>
+				</div>
+				<div>
+				<span>Select the required type of delivery</span>
+					<div class="form-check">
+  						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  						<label class="radio-inline" for="exampleRadios1">
+    					Ordinary Delivery
+  						</label>
+					</div>
+					<div class="form-check">
+  						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  						<label class="radio-inline" for="exampleRadios2">
+    					Speed Delivery
+  						</label>
+					</div>
+					<div class="form-check">
+  						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  						<label class="radio-inline" for="exampleRadios2">
+    					Ultra-Speed Delivery
+  						</label>
+					</div>
+				</div>
+				<div>
+					   <div class="form-group">
+					    <button type="button" class="btn btn-primary" onclick="viewOrder()">Place Order</button>
+
+					  </div>
+				</div>
+				
+		</div>
+		<div class="col-md-6">
+		<table>
+		<tr>
+		<td>Name</td>
+		<td>Phone Number</td>
+		<td>Source</td>
+		<td>Destination</td>
+		<td>KG</td>
+		<td>Delivery Type</td>
+		</table>
+		</div>
+					  
+	</div>
+	</div>
+
+	
+</body>
+</html>
